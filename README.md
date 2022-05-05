@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="../output/ffmpeg_utility.png" alt="FFMPEG UTILITY"></a>
+ <img width=200px height=200px src="./resources/ffmpeg_utility.png" alt="FFMPEG UTILITY"></a>
 </p>
 
 <h3 align="center">A FFMPEG UTILITY</h3>
@@ -27,8 +27,8 @@
 - [Deployment](#deployment)
 - [Usage](#usage)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
+- [TODO](./TODO.md)
+- [Contributing](./CONTRIBUTING.md)
 - [Authors](#authors)
 
 ## 🧐 About <a name = "about"></a>
