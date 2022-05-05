@@ -50,24 +50,24 @@ In order to use this module, you have installed folowings:
 
 ```
 $ sudo apt install git python python-pip ffmpeg -y
+$ git clone https://github.com/MudabbirulSaad/FFMPEG-UTILITY && cd FFMPEG-UTILITY
 $ pip install -r requirements.txt
-$ git clone https://github.com/MudabbirulSaad/FFMPEG-UTILITY
 ```
 
 # Termux
 
 ```
-$ apt update && apt install git python python-pip ffmpeg -y
+$ apt update && apt install git python ffmpeg -y
+$ git clone https://github.com/MudabbirulSaad/FFMPEG-UTILITY && cd FFMPEG-UTILITY
 $ pip install -r requirements.txt
-$ git clone https://github.com/MudabbirulSaad/FFMPEG-UTILITY
 ```
 
 # Arch-linux
 
 ```
 $ sudo pacman -Syy && sudo pacman -S git python python-pip ffmpeg -y
+$ git clone https://github.com/MudabbirulSaad/FFMPEG-UTILITY && cd FFMPEG-UTILITY
 $ pip install -r requirements.txt
-$ git clone https://github.com/MudabbirulSaad/FFMPEG-UTILITY
 ```
 
 # Mac
@@ -75,9 +75,10 @@ $ git clone https://github.com/MudabbirulSaad/FFMPEG-UTILITY
 Download python from official [website](https://www.python.org/downloads/). Then execute the followings in terminal.
 
 ```
-$ pip install -r requirements.txt
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-$ brew install ffmpeg
+$ brew install ffmpeg git
+$ git clone https://github.com/MudabbirulSaad/FFMPEG-UTILITY && cd FFMPEG-UTILITY
+$ pip install -r requirements.txt
 ```
 
 
