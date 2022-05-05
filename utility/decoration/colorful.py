@@ -1,6 +1,4 @@
-import colorama
 from termcolor import colored
-from colorama import Fore, init
 
 def red(text):
     return colored(text, "red")
@@ -19,9 +17,3 @@ def yellow(text):
 
 def regular(text):
     return text
-
-# red = Fore.RED
-# green = Fore.GREEN
-# blue = Fore.BLUE
-# cyan = Fore.CYAN
-# yellow = Fore.YELLOW
