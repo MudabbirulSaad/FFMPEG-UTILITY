@@ -1,4 +1,3 @@
-from cmath import inf
 from ..decoration.colorful import red, green, blue, yellow, cyan
 
 info_sign = "[?]"
