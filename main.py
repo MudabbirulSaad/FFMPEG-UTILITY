@@ -1,5 +1,6 @@
 #import argparse
 from utility.converter import ext_audio
+from utility.decoration.logo import printlogo
 from utility.interactive.textout import printinfo, printerror
 from utility.interactive.textin import ininfo, inerror, inregular, inwarn
 
@@ -24,14 +25,8 @@ from utility.interactive.textin import ininfo, inerror, inregular, inwarn
 
 # data= parser.parse_args()
 
-def run(inp, kbit, outp):
-    fileName = inp
-    bitrate = kbit
-    outName = outp
-    ext_audio(inp, kbit, outp)
-
-
 def main():
+    printlogo()
     try:
         inp = input(ininfo("Enter the filename: "))
         kbit = input(ininfo("Bitrate of the output file (default: 320): "))
@@ -47,10 +42,10 @@ def main():
             outp = f"{inp}-{kbit}K"
         else:
             outp = "{}-{}".format(outp, kbit)
-        run(inp, kbit, outp)
+        ext_audio(inp, kbit, outp)
     except Exception as e:
-        print("Error Log: {}".format(e))
-        print("\n[!] Okay! Exiting...")
+        print("Error Log: {}\n".format(e))
+        printinfo("Okay! Exiting...")
         exit(1)
         
 if __name__ == '__main__':
