@@ -1,6 +1,6 @@
 #import argparse
 from utility.converter import ext_audio
-from utility.decoration.logo import printlogo
+from utility.decoration.logo import logo
 from utility.interactive.textout import printinfo, printerror
 from utility.interactive.textin import ininfo, inerror, inregular, inwarn
 
@@ -26,7 +26,7 @@ from utility.interactive.textin import ininfo, inerror, inregular, inwarn
 # data= parser.parse_args()
 
 def main():
-    printlogo()
+    logo()
     try:
         inp = input(ininfo("Enter the filename: "))
         kbit = input(ininfo("Bitrate of the output file (default: 320): "))

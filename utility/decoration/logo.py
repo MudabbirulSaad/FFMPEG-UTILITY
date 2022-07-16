@@ -1,8 +1,8 @@
 from ..decoration.version import version
-from ..interactive.textout import printinfo
+from ..interactive.textout import printlogo
 
 
-def printlogo():
+def logo():
     text = f'''
 
  /$$$$$$$$ /$$$$$$$$ /$$      /$$ /$$$$$$$  /$$$$$$$$  /$$$$$$ 
@@ -17,4 +17,4 @@ def printlogo():
                                         -{version()}                                                     
                                                                
     '''
-    return printinfo(text)
+    return printlogo(text)

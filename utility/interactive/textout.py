@@ -15,3 +15,6 @@ def printcyan(text):
     
 def printregular(text):
     print(f"{regular_sign} {regular(text)}")
+
+def printlogo(text):
+    print(yellow(text))
