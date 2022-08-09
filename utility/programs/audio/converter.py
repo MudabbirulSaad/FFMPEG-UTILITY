@@ -1,5 +1,5 @@
 import subprocess
-from utility.paths import checkDir
+from utility.tools.paths import checkDir
 from utility.interactive.textout import printsuccess, printerror
 
 out_dir = "output"
