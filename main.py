@@ -1,8 +1,10 @@
 #import argparse
-from utility.converter import ext_audio
 from utility.decoration.logo import logo
-from utility.interactive.textout import printinfo, printerror
-from utility.interactive.textin import ininfo, inerror, inregular, inwarn
+from utility.interactive.textout import printerror, printinfo
+from utility.programs.audio.direct_path import direct_path_audio
+from utility.programs.audio.serial_path import serial_path_audio
+from utility.programs.audio.batch_path import batch_path_audio
+
 
 # TODO
 # parser = argparse.ArgumentParser(description='FFMPEG utility helper.')
@@ -28,21 +30,16 @@ from utility.interactive.textin import ininfo, inerror, inregular, inwarn
 def main():
     logo()
     try:
-        inp = input(ininfo("Enter the filename: "))
-        kbit = input(ininfo("Bitrate of the output file (default: 320): "))
-        outp = input(ininfo("Enter the output filename (optional): "))
-        if inp == '':
-            printerror("Please enter a file name.")
-            exit(1)
-        if kbit == '':
-            kbit = "320"
+        printinfo("What do you preffered?\n1. Enter direct file path\n2. Enter filename by checking serial no.\n3. Batch Extraction.")
+        user_choice = int(input("Enter your choice: "))
+        if user_choice == 1:
+            direct_path_audio()
+        elif user_choice == 2:
+            serial_path_audio()
+        elif user_choice == 3:
+            batch_path_audio()
         else:
-            kbit = kbit
-        if outp == '':
-            outp = f"{inp}-{kbit}K"
-        else:
-            outp = "{}-{}".format(outp, kbit)
-        ext_audio(inp, kbit, outp)
+            printerror("Invalid choice: " + user_choice)
     except Exception as e:
         print("Error Log: {}\n".format(e))
         printinfo("Okay! Exiting...")
